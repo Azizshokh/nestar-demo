@@ -1,6 +1,6 @@
-const Property = () => {
-  console.log("PROPERTY COMPONENT - PAGES ROUTER");
+const PropertyList = () => {
+  console.log("PROPERTYLIST COMPONENT - PAGES ROUTER");
   return <div>PROPERTY LIST</div>;
 };
 
-export default Property;
+export default PropertyList;
