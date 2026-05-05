@@ -3,7 +3,7 @@ import { Stack, Box } from "@mui/material";
 import WestIcon from "@mui/icons-material/West";
 import EastIcon from "@mui/icons-material/East";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Navigation, Pagination } from "swiper/modules";
 import TopPropertyCard from "./TopPropertyCard";
 
 const TopProperties = ({ initialInput = [] }: any) => {
@@ -33,6 +33,7 @@ const TopProperties = ({ initialInput = [] }: any) => {
             className={"top-property-swiper"}
             slidesPerView={"auto"}
             spaceBetween={15}
+            modules={[Navigation, Pagination]}
             navigation={{
               nextEl: ".swiper-top-next",
               prevEl: ".swiper-top-prev",

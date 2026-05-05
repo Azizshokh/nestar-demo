@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Stack, Box } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import TopAgentCard from "./TopAgentCard";
 
 const TopAgents = ({ initialInput, ...props }: any) => {
@@ -32,6 +33,7 @@ const TopAgents = ({ initialInput, ...props }: any) => {
               className={"top-agents-swiper"}
               slidesPerView={"auto"}
               spaceBetween={29}
+              modules={[Navigation]}
               navigation={{
                 nextEl: ".swiper-agents-next",
                 prevEl: ".swiper-agents-prev",

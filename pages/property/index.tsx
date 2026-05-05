@@ -1,13 +1,45 @@
-import withLayoutBasic from "@/libs/components/layout/LayoutBasic";
-import Container from "@mui/material/Container/Container";
-import Stack from "@mui/material/Stack/Stack";
+import React, { useState } from "react";
 import { NextPage } from "next";
+import { Box, Button, Pagination, Stack, Typography } from "@mui/material";
+import PropertyCard from "../../libs/components/property/PropertyCard";
+import withLayoutBasic from "../../libs/components/layout/LayoutBasic";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import Filter from "@/libs/components/property/Filter";
 
 const PropertyList: NextPage = () => {
-  console.log("PROPERTYLIST COMPONENT - PAGES ROUTER");
+  const [properties, setProperties] = useState<number[]>([1, 2, 3, 4, 5, 6]);
+
   return (
-    <div style={{ margin: "20px 0" }}>
-      <Stack className="container">PROPERTY LIST</Stack>
+    <div id="property-list-page" style={{ position: "relative" }}>
+      <Stack className="container">
+        <Box className="right">
+          <span>Sort by:</span>
+          <div>
+            <Button endIcon={<KeyboardArrowDownRoundedIcon />}>New</Button>
+          </div>
+        </Box>
+
+        <Stack className={"property-page"}>
+          <Stack className={"filter-config"}>
+            <Filter />
+          </Stack>
+          <Stack className={"main-config"} mb={"76px"}>
+            <Stack className={"list-config"}>
+              {properties.map((item: number) => {
+                return <PropertyCard key={item} />;
+              })}
+            </Stack>
+            <Stack className={"pagination-config"}>
+              <Stack className={"pagination-box"}>
+                <Pagination count={10} shape="rounded" />
+              </Stack>
+              <Stack className={"total-result"}>
+                <Typography>Total 6 properties available</Typography>
+              </Stack>
+            </Stack>
+          </Stack>
+        </Stack>
+      </Stack>
     </div>
   );
 };

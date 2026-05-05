@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Stack, Box } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 import PopularPropertyCard from "./PopularPropertyCard";
 import Link from "next/link";
 
@@ -33,6 +34,7 @@ const PopularProperties = ({ initialInput, ...props }: any) => {
             className={"popular-property-swiper"}
             slidesPerView={"auto"}
             spaceBetween={25}
+            modules={[Navigation, Pagination]}
             navigation={{
               nextEl: ".swiper-popular-next",
               prevEl: ".swiper-popular-prev",

@@ -1,0 +1,106 @@
+#pc-wrap {
+    .property-detail-page {
+        position: relative;
+        background: #fff;
+        padding-top: 87px;
+        padding-bottom: 200px;
+
+        .property-detail-config {
+            width: 100%;
+            height: auto;
+            padding-top: 56px;
+            gap: 30px;
+
+            .property-info-config {
+                width: 100%;
+                height: auto;
+                gap: 30px;
+
+                .info {
+                    width: 100%;
+                    height: auto;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .left-box {
+                        width: 50%;
+                        height: auto;
+
+                        .title-main {
+                            color: #181a20;
+                            font-family: $font;
+                            font-size: 30px;
+                            font-weight: 600;
+                            letter-spacing: 0.6px;
+                            text-transform: capitalize;
+                        }
+
+                        .top-box {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            margin-bottom: 17px;
+
+                            .city {
+                                color: #717171;
+                                font-size: 13px;
+                            }
+
+                            .divider {
+                                width: 1px;
+                                height: 20px;
+                                background: #ddd;
+                            }
+
+                            .buy-rent {
+                                color: #eb6753;
+                                font-size: 15px;
+                                font-weight: 600;
+                            }
+
+                            .date {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+
+                    .right-box {
+                        align-items: flex-end;
+
+                        .buttons {
+                            display: flex;
+                            gap: 11px;
+                            margin-bottom: 27px;
+                        }
+
+                        p {
+                            font-size: 26px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .images {
+                    .main-image img {
+                        width: 100%;
+                        height: 600px;
+                        object-fit: cover;
+                        border-radius: 12px;
+                    }
+
+                    .sub-images {
+                        display: flex;
+                        gap: 10px;
+
+                        .sub-img-box img {
+                            width: 120px;
+                            height: 120px;
+                            border-radius: 12px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
